@@ -105,9 +105,9 @@ i = 1
 for row in sheet.iter_rows(min_row=2, min_col=1, max_row=(sheet.max_row), max_col=1):
     i = i + 1
     if sheet["B" + str(i)].value != None:
-        driver.get("https://directory.accenture.com//UserStatus")
+        driver.get("#################")
         os.system("CLS")
-        WebDriverWait(driver, timeOut).until(EC.title_is("Accenture User Status"))
+        WebDriverWait(driver, timeOut).until(EC.title_is("############"))
 
         try:
             WebDriverWait(driver, timeOut).until(EC.presence_of_element_located((By.XPATH, '/html/body/div[3]/div[2]/form/div[3]/table/tbody/tr[3]/td[2]/table/tbody/tr/td[1]/input')))
@@ -144,7 +144,7 @@ for row in sheet.iter_rows(min_row=2, min_col=1, max_row=(sheet.max_row), max_co
     else:
         print("El archivo excel no tiene NJ")
 workbook.save(excelFile)
-driver.get("https://directory.accenture.com/ResetPassword/BulkReset")
+driver.get("############")
 
 time.sleep(3)
 os.system('cls')
@@ -213,7 +213,7 @@ for row in sheet.iter_rows(min_row=2, min_col=1, max_row=(len(EIDArray)) + 1, ma
         i = i + 1
         workbook.save(excelFile)
 
-driver.get("https://myuserauth.accenture.com")
+driver.get("########################")
 os.system('cls')
 time.sleep(5)
 try:
